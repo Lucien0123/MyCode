@@ -1,17 +1,17 @@
 # 登陆后的JSESSIONID
-JSESSIONID: D1AE4AXXXXXXXXXXXD7CA21CF07C0B
+JSESSIONID: 6DA868796215E6E837354D9F0562F088
 #  预约日期 格式必须是：yyyy-MM-dd
-bookDate: 2019-08-27
+bookDate: 2019-10-13
 #  景区名称，必须取 SubscribeIdEnum 中对应的名称
-subscribeName: 太平洋海底世界预约
+subscribeName: 欢乐谷2020
 emailNotice: true
 #  是否开启定时抢票
 timing: false
 #  设置开抢的定时时间
-timingStartTimeConfig: '2019-07-24 06:55'
+timingStartTimeConfig: '2019-10-10 15:00'
 #  预约截止时间，防止在此时间点之后约到票了但是来不及赶去景点,最大不应超过预约日期+24h
-endTimeConfig: '2019-08-27 10:00'
+endTimeConfig: '2019-10-12 15:00'
 #  预约卡号列表
 cardNoList:
-- XXXXXX
+- 209900255584
 

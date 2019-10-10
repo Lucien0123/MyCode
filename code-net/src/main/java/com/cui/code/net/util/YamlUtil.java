@@ -35,7 +35,7 @@ public class YamlUtil {
     public static BookCardInfo getBookCardInfo() {
         Yaml yaml = new Yaml(new Constructor(BookCardInfo.class));
         InputStream inputStream = YamlUtil.class.getResourceAsStream(LY_CONFIG_FILE);
-        BookCardInfo bookCardInfo = yaml.load(inputStream);
+        BookCardInfo bookCardInfo = (BookCardInfo) yaml.load(inputStream);
 
         LocalDateTime startTime = LocalDateTime.parse(bookCardInfo.getTimingStartTimeConfig(), dateTimeFormatter);
         Instant instant = startTime.atZone(ZoneId.systemDefault()).toInstant();
@@ -59,7 +59,7 @@ public class YamlUtil {
     public static HospitalBookInfo getHospitalBookInfo() {
         Yaml yaml = new Yaml(new Constructor(HospitalBookInfo.class));
         InputStream inputStream = YamlUtil.class.getResourceAsStream(HOSPITAL_CONFIG_FILE);
-        HospitalBookInfo hospitalBookInfo = yaml.load(inputStream);
+        HospitalBookInfo hospitalBookInfo = (HospitalBookInfo) yaml.load(inputStream);
 
         hospitalBookInfo.setHospitalId(getHospitalIdByName(hospitalBookInfo.getHospitalName()));
 
